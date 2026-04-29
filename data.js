@@ -34,7 +34,7 @@ const INTERVIEW_DATA = {
       {
         name: "Reach Predictor",
         resources: [
-          { label: "GRPs_20260429.xlsx", url: "files/GRPs_20260429.xlsx" },
+          { label: "김민지_20260429.xlsx", url: "files/김민지_20260429.xlsx" },
           { label: "(기존) MTS - Reach Predictor", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3060?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B9%80%EB%AF%BC%EC%A7%80" },
         ]
       },
