@@ -48,6 +48,26 @@ const INTERVIEW_DATA = {
     ]
   },
 
+  "신지아": {
+    surveyUrl: DEFAULT_SURVEY_URL,
+    folders: [
+      {
+        name: "Reach Predictor",
+        resources: [
+          { label: "신지아_20260429.xlsx", url: "files/신지아_20260429.xlsx" },
+          { label: "(기존) MTS - Reach Predictor", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3060?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B9%80%EB%AF%BC%EC%A7%80" },
+        ]
+      },
+      {
+        name: "Ratio Finder",
+        resources: [
+          { label: "비율 분석.xlsx",        url: "https://example.com/file2.xlsx" },
+          { label: "Ratio Finder 사이트",   url: "https://example.com" },
+        ]
+      },
+    ]
+  },  
+
   "구지숙": {
     surveyUrl: DEFAULT_SURVEY_URL,
     folders: [
