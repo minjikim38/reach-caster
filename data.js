@@ -3,9 +3,15 @@
 //  이 파일만 수정하면 모든 내용이 반영됩니다.
 // ================================================================
 
-// ① 구글 설문 링크 (전체 공통)
-const DEFAULT_SURVEY_URL = "https://forms.gle/여기에링크입력";
+// ① 공통 링크 설정
+const DEFAULT_SURVEY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeAK39xSiqZoX9cJ3YP9SgNneXdUTwznuCZ5huo7GBeCDRwDA/viewform";
 
+// Ratio Finder 공통 리소스
+const COMMON_RATIO_FINDER_RESOURCES = [
+  { label: "비율 분석_ver1.xlsx", url: "https://example.com/file2.xlsx" },
+  { label: "비율 분석_ver2.xlsx", url: "https://example.com/file2.xlsx" },
+  { label: "비율 분석_ver3.xlsx", url: "https://example.com/file2.xlsx" }
+];
 
 // ② 인터뷰 대상자별 자료 설정
 //
@@ -40,10 +46,7 @@ const INTERVIEW_DATA = {
       },
       {
         name: "Ratio Finder",
-        resources: [
-          { label: "비율 분석.xlsx",        url: "https://example.com/file2.xlsx" },
-          { label: "Ratio Finder 사이트",   url: "https://example.com" },
-        ]
+        resources: COMMON_RATIO_FINDER_RESOURCES
       },
     ]
   },
@@ -60,10 +63,7 @@ const INTERVIEW_DATA = {
       },
       {
         name: "Ratio Finder",
-        resources: [
-          { label: "비율 분석.xlsx",        url: "https://example.com/file2.xlsx" },
-          { label: "Ratio Finder 사이트",   url: "https://example.com" },
-        ]
+        resources: COMMON_RATIO_FINDER_RESOURCES
       },
     ]
   },  
@@ -101,12 +101,13 @@ const INTERVIEW_DATA = {
   ] } ] },
   "조아라":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "Ratio Finder 사이트", url: "https://..." }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
   ] }, { name: "Ratio Finder", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" }
   ] } ] },
   "백현기":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
-    
+    { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/2525?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EB%B0%B1%ED%98%84%EA%B8%B0" }
   ] }, { name: "Ratio Finder", resources: [
     
   ] } ] },
