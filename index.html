@@ -137,27 +137,51 @@
 
     nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleLogin(); });
 
+    // 1. 로그인 핸들러 (캐릭터 미선택 방지 포함)
     function handleLogin() {
       const name = nameInput.value.trim();
       const data = INTERVIEW_DATA[name];
+
+      // 캐릭터 선택 확인 (선택 안 했으면 알림)
+      if (selectedCharacter === '✨') {
+        alert('나의 인터뷰어 캐릭터를 선택해 주세요! 🐻🐰🐱🦊');
+        return;
+      }
+
       if (!data) {
         errorMsg.classList.remove('hidden');
         nameInput.classList.add('border-accent');
         return;
       }
+      
       errorMsg.classList.add('hidden');
       nameInput.classList.remove('border-accent');
       showDashboard(name, data);
     }
 
+    // 2. 대시보드 표시 (운세 랜덤 출력 핵심)
     function showDashboard(name, data) {
+      // 1. 이름과 선택한 캐릭터 표시
       document.getElementById('display-name').textContent = name;
+      document.getElementById('display-char').textContent = selectedCharacter;
+      
+      // 2. 랜덤 운세 뽑기 (추가된 로직)
+      const randomMent = MENT_LIST[Math.floor(Math.random() * MENT_LIST.length)];
+      
+      // 3. 상단 Welcome 텍스트를 운세로 교체
+      const welcomeText = document.querySelector('#page-dashboard p.text-accent');
+      if (welcomeText) {
+        welcomeText.textContent = `🔮 ${randomMent}`;
+        welcomeText.classList.remove('uppercase', 'tracking-widest'); // 가독성을 위해 스타일 조정
+      }
+
+      // 4. 설문 배너 및 폴더 렌더링
       document.getElementById('survey-banner').href = data.surveyUrl || DEFAULT_SURVEY_URL;
       renderFolders(data.folders);
+      
       loginPage.classList.add('hidden');
       dashboardPage.classList.remove('hidden');
     }
-
     function toggleFolder(id) {
       const body = document.getElementById('body-' + id);
       const chevron = document.getElementById('chevron-' + id);
@@ -231,13 +255,16 @@
         </a>`;
     }
 
+    // 3. 로그아웃 (상태 초기화)
     function handleLogout() {
       nameInput.value = '';
+      selectedCharacter = '✨'; // 초기화
+      document.querySelectorAll('.char-btn').forEach(btn => btn.classList.remove('selected'));
       dashboardPage.classList.add('hidden');
       loginPage.classList.remove('hidden');
     }
-
-    // 추가: 캐릭터 및 문구 데이터
+    
+    // 4. 데이터 및 캐릭터 선택 (스크립트 최하단)
     let selectedCharacter = '✨'; // 기본값
     const MENT_LIST = [
       "오늘의 운세: '뜻밖의 행운이 당신을 기다리고 있습니다. 자신감을 가지세요!' ✨",
@@ -257,6 +284,7 @@
         btn.classList.toggle('selected', btn.innerText === emoji);
       });
     }
+    
   </script>
 </body>
 </html>
