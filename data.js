@@ -35,7 +35,7 @@ const INTERVIEW_DATA = {
         name: "Reach Predictor",
         resources: [
           { label: "김민지_20260429.xlsx", url: "files/김민지_20260429.xlsx" },
-          { label: "(기존) MTS - Reach Predictor", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3060?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B9%80%EB%AF%BC%EC%A7%80" },
+          { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3060?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B9%80%EB%AF%BC%EC%A7%80" },
         ]
       },
       {
@@ -55,7 +55,7 @@ const INTERVIEW_DATA = {
         name: "Reach Predictor",
         resources: [
           { label: "신지아_20260429.xlsx", url: "files/신지아_20260429.xlsx" },
-          { label: "(기존) MTS - Reach Predictor", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3060?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B9%80%EB%AF%BC%EC%A7%80" },
+          { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/2136?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2025&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EC%8B%A0%EC%A7%80%EC%95%84" },
         ]
       },
       {
@@ -74,7 +74,8 @@ const INTERVIEW_DATA = {
       {
         name: "Reach Predictor",
         resources: [
-          // { label: "파일명 또는 링크 이름", url: "https://..." },
+          { label: "파일명 또는 링크 이름", url: "https://..." },
+          { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
         ]
       },
       {
@@ -86,7 +87,13 @@ const INTERVIEW_DATA = {
     ]
   },
 
-  "양은미":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [] }, { name: "Ratio Finder", resources: [] } ] },
+  "양은미":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
+    { label: "파일명 또는 링크 이름", url: "https://..." },
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
+  ] }, { name: "Ratio Finder", resources: [
+    { label: "파일명 또는 링크 이름", url: "https://..." },
+    { label: "Ratio Finder 사이트", url: "https://..." }
+  ] } ] },
   "구연수":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [] }, { name: "Ratio Finder", resources: [] } ] },
   "조아라":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [] }, { name: "Ratio Finder", resources: [] } ] },
   "백현기":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [] }, { name: "Ratio Finder", resources: [] } ] },
