@@ -180,28 +180,28 @@
 
     // 2. 대시보드 표시 (운세 랜덤 출력 핵심)
     function showDashboard(name, data) {
-      document.getElementById('display-name').textContent = name;
-      document.getElementById('display-char').textContent = selectedCharacter;
-      
-      const randomMent = MENT_LIST[Math.floor(Math.random() * MENT_LIST.length)];
-      
-      const welcomeText = document.querySelector('#page-dashboard p.text-accent');
-      if (welcomeText) {
-        welcomeText.textContent = `🔮 ${randomMent}`;
-        
-        // --- 부담스럽지 않게 세련된 스타일로 변경 ---
-        welcomeText.style.textTransform = 'none';
-        welcomeText.style.letterSpacing = 'normal';
-        // 너무 크지 않은 text-base(16px)에 굵기만 주어 가독성 확보
-        welcomeText.className = "text-base font-bold text-accent mb-2 fade-in block";
-      }
-
-      document.getElementById('survey-banner').href = data.surveyUrl || DEFAULT_SURVEY_URL;
-      renderFolders(data.folders || []);
-      
-      loginPage.classList.add('hidden');
-      dashboardPage.classList.remove('hidden');
+    // 1. 이름과 캐릭터 표시
+    document.getElementById('display-name').textContent = name;
+    document.getElementById('display-char').textContent = selectedCharacter;
+    
+    // 2. 랜덤 운세 뽑기
+    const randomMent = MENT_LIST[Math.floor(Math.random() * MENT_LIST.length)];
+    
+    // 3. 정확하게 '운세 자리'에만 멘트 넣기 (id로 접근)
+    const fortuneTarget = document.getElementById('fortune-display');
+    if (fortuneTarget) {
+      fortuneTarget.textContent = `🔮 ${randomMent}`;
+      // 스타일을 깔끔하게 고정 (설문 박스에 영향 안 가도록)
+      fortuneTarget.className = "text-base font-bold text-accent mb-2 fade-in block";
     }
+  
+    // 4. 설문 배너 및 폴더 렌더링 (원래대로)
+    document.getElementById('survey-banner').href = data.surveyUrl || DEFAULT_SURVEY_URL;
+    renderFolders(data.folders || []);
+    
+    loginPage.classList.add('hidden');
+    dashboardPage.classList.remove('hidden');
+  }
     
     function toggleFolder(id) {
       const body = document.getElementById('body-' + id);
