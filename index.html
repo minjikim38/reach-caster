@@ -127,8 +127,8 @@
             <span class="flex h-2 w-2 rounded-full bg-accent animate-ping"></span>
             <p class="text-xs font-bold text-accent uppercase tracking-widest">필수 참여</p>
           </div>
-          <p class="text-lg font-bold text-primary">가장 먼저 인터뷰 설문을 완료해 주세요!</p>
-          <p class="text-sm text-slate-500 mt-1 line-clamp-1">아래 자료들을 훑어보신 후 의견을 남겨주시면 큰 도움이 됩니다.</p>
+          <p class="text-lg font-bold text-primary">아래 파일들을 확인 후, 설문에 참여해주세요.</p>
+          <p class="text-sm text-slate-500 mt-1 line-clamp-1">클릭하면 구글 설문 페이지로 이동합니다.</p>
         </div>
 
         <div class="bg-white p-2 rounded-full shadow-sm group-hover:bg-accent group-hover:text-white transition-colors">
@@ -189,10 +189,11 @@
       if (welcomeText) {
         welcomeText.textContent = `🔮 ${randomMent}`;
         
-        // --- 운세 멘트 강조 스타일 추가 ---
+        // --- 부담스럽지 않게 세련된 스타일로 변경 ---
         welcomeText.style.textTransform = 'none';
         welcomeText.style.letterSpacing = 'normal';
-        welcomeText.className = "inline-block bg-white border border-pink-100 text-pink-500 px-5 py-3 rounded-2xl shadow-sm text-lg font-bold mb-4 fade-in";
+        // 너무 크지 않은 text-base(16px)에 굵기만 주어 가독성 확보
+        welcomeText.className = "text-base font-bold text-accent mb-2 fade-in block";
       }
 
       document.getElementById('survey-banner').href = data.surveyUrl || DEFAULT_SURVEY_URL;
