@@ -37,11 +37,17 @@
     .chevron.open { transform: rotate(90deg); }
 
     /* 설문 배너 광택 효과 (첨부파일 컨셉) */
-    .emphasis-banner { position: relative; overflow: hidden; border: 1px solid #F472B6 !important; }
+    .emphasis-banner { 
+      position: relative; 
+      overflow: hidden; 
+      border: 1px solid rgba(236, 72, 153, 0.2) !important; 
+      background: linear-gradient(to right, #ffffff, #fdf2f8);
+    }
+
     .emphasis-banner::after { 
       content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
-      background: linear-gradient(45deg, transparent, rgba(244, 114, 182, 0.05), transparent); 
-      transform: rotate(45deg); animation: shine 4s infinite; 
+      background: linear-gradient(45deg, transparent, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1), transparent); 
+      transform: rotate(45deg); animation: shine 5s infinite; 
     }
     @keyframes shine { 0% { transform: translateX(-100%) rotate(45deg); } 100% { transform: translateX(100%) rotate(45deg); } }
   </style>
