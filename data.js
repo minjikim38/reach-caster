@@ -74,7 +74,7 @@ const INTERVIEW_DATA = {
       {
         name: "Reach Predictor",
         resources: [
-          { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
+          { label: "구지숙님_타겟성과예측_20260507.xlsx", url: "files/구지숙님_타겟성과예측_20260507.xlsx" },
           { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/2622?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B5%AC%EC%A7%80%EC%88%99" }
         ]
       },
