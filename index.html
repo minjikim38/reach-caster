@@ -11,9 +11,9 @@
       theme: {
         extend: {
           colors: {
-            primary: '#475569', // 이미지와 유사한 세련된 슬레이트 그레이
-            accent: '#EC4899',  // 화사한 핑크
-            bg: '#F8FAFC',      // 깨끗한 바탕색
+            primary: '#475569', 
+            accent: '#EC4899',  
+            bg: '#F8FAFC',      
             purplePXL: '#8B5CF6',
             bluePXL: '#3B82F6'
           }
@@ -23,28 +23,20 @@
   </script>
   <style>
     * { font-family: 'Paperlogy', sans-serif; letter-spacing: -0.02em; }
-    
-    /* 1. 배경 패턴 제거: 회색 점들을 없애고 깨끗한 배경으로 변경 */
     body { background-color: #F8FAFC; margin: 0; }
-    
     .fade-in { animation: fadeIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-    
     .folder-body { display: none; }
     .folder-body.open { display: block; animation: slideDown 0.3s ease-out; }
     @keyframes slideDown { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
-    
     .chevron { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     .chevron.open { transform: rotate(90deg); }
-
-    /* 2. 설문 배너: 이미지 느낌의 은은한 그라데이션과 테두리 */
     .emphasis-banner { 
       position: relative; 
       overflow: hidden; 
       border: 1px solid rgba(236, 72, 153, 0.15) !important; 
       background: linear-gradient(to right, #ffffff, #fdf2f8);
     }
-
     .emphasis-banner::after { 
       content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
       background: linear-gradient(45deg, transparent, rgba(236, 72, 153, 0.08), rgba(139, 92, 246, 0.08), transparent); 
@@ -53,10 +45,8 @@
     @keyframes shine { 0% { transform: translateX(-100%) rotate(45deg); } 100% { transform: translateX(100%) rotate(45deg); } }
   </style>
 </head>
-<!-- 3. 글자색 변경: text-slate-900(너무 시커먼 색)에서 text-primary(세련된 회색)로 변경 -->
 <body class="text-primary">
 
-  <!-- [1] 로그인 페이지 -->
   <div id="page-login" class="min-h-screen flex items-center justify-center px-4">
     <div class="w-full max-w-[400px] fade-in">
       <div class="bg-white/80 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-200 overflow-hidden p-10 text-center">
@@ -71,11 +61,13 @@
         
         <div class="space-y-4">
           <input id="name-input" type="text" placeholder="김민지" class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all text-center" />
+          
+          <p id="error-msg" class="hidden text-xs text-rose-500 font-semibold">등록되지 않은 사용자입니다.</p>
+          
           <button onclick="handleLogin()" class="w-full py-3.5 bg-slate-800 text-white rounded-xl font-bold text-sm hover:bg-slate-700 transition-all">접속하기</button>
         </div>
       </div>
 
-    <!-- 하단 AX팀 정보 영역: 트렌디한 느낌으로 추가 -->
     <div class="mt-8 text-center">
         <div class="inline-flex items-center gap-3">
           <span class="h-px w-4 bg-slate-200"></span>
@@ -89,7 +81,6 @@
     </div>
   </div>
 
-  <!-- [2] 대시보드 페이지 -->
   <div id="page-dashboard" class="hidden min-h-screen flex flex-col">
     <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-100 px-8 py-4">
       <div class="max-w-3xl mx-auto flex items-center justify-between">
@@ -111,7 +102,6 @@
         <p class="text-slate-500 text-[14px] mt-2 leading-relaxed">제공된 자료를 검토하신 후, 설문지에 의견을 남겨주세요.</p>
       </header>
 
-      <!-- 설문 배너 -->
       <a id="survey-banner" href="#" target="_blank" rel="noopener"
         class="flex items-center gap-5 bg-white rounded-2xl p-5 mb-8 shadow-sm hover:shadow-md transition-all group emphasis-banner fade-in">
         <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-purplePXL/20 flex items-center justify-center text-accent">
@@ -138,18 +128,28 @@
 
   <script src="data.js"></script>
   <script>
-    // 스크립트 부분은 기존 로직을 유지하되 renderFolders만 조금 더 컴팩트하게 수정했습니다.
     const loginPage = document.getElementById('page-login');
     const dashboardPage = document.getElementById('page-dashboard');
     const nameInput = document.getElementById('name-input');
     const errorMsg = document.getElementById('error-msg');
 
+    // 입력 시 에러 메시지 초기화
+    nameInput.addEventListener('input', () => {
+      errorMsg.classList.add('hidden');
+    });
+
     nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleLogin(); });
 
     function handleLogin() {
       const name = nameInput.value.trim();
+      
+      // data.js의 INTERVIEW_DATA에 이름이 있는지 확인
+      if (typeof INTERVIEW_DATA === 'undefined' || !INTERVIEW_DATA[name]) { 
+        errorMsg.classList.remove('hidden'); 
+        return; 
+      }
+      
       const data = INTERVIEW_DATA[name];
-      if (!data) { errorMsg.classList.remove('hidden'); return; }
       showDashboard(name, data);
     }
 
@@ -159,6 +159,7 @@
       renderFolders(data.folders || []);
       loginPage.classList.add('hidden');
       dashboardPage.classList.remove('hidden');
+      errorMsg.classList.add('hidden'); // 로그인 성공 시 에러 메시지 숨김
     }
 
     function handleLogout() {
