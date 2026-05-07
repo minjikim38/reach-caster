@@ -60,10 +60,8 @@
         <p class="text-slate-500 text-sm mb-10">성함을 입력해 주세요.</p>
         
         <div class="space-y-4">
-          <input id="name-input" type="text" placeholder="김민지" class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all text-center" />
-          
+          <input id="name-input" type="text" placeholder="이름 입력" class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all text-center" />
           <p id="error-msg" class="hidden text-xs text-rose-500 font-semibold">등록되지 않은 사용자입니다.</p>
-          
           <button onclick="handleLogin()" class="w-full py-3.5 bg-slate-800 text-white rounded-xl font-bold text-sm hover:bg-slate-700 transition-all">접속하기</button>
         </div>
       </div>
@@ -84,10 +82,10 @@
   <div id="page-dashboard" class="hidden min-h-screen flex flex-col">
     <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-100 px-8 py-4">
       <div class="max-w-3xl mx-auto flex items-center justify-between">
-        <div class="flex items-center gap-2">
+        <button onclick="handleLogout()" class="flex items-center gap-2 hover:opacity-70 transition-opacity">
           <div class="w-1 h-4 bg-accent rounded-full"></div>
           <span class="font-bold text-slate-800 text-lg">Reach Caster</span>
-        </div>
+        </button>
         <button onclick="handleLogout()" class="text-[10px] font-bold text-slate-400 hover:text-accent uppercase tracking-widest">Logout</button>
       </div>
     </nav>
@@ -133,22 +131,15 @@
     const nameInput = document.getElementById('name-input');
     const errorMsg = document.getElementById('error-msg');
 
-    // 입력 시 에러 메시지 초기화
-    nameInput.addEventListener('input', () => {
-      errorMsg.classList.add('hidden');
-    });
-
+    nameInput.addEventListener('input', () => { errorMsg.classList.add('hidden'); });
     nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleLogin(); });
 
     function handleLogin() {
       const name = nameInput.value.trim();
-      
-      // data.js의 INTERVIEW_DATA에 이름이 있는지 확인
       if (typeof INTERVIEW_DATA === 'undefined' || !INTERVIEW_DATA[name]) { 
         errorMsg.classList.remove('hidden'); 
         return; 
       }
-      
       const data = INTERVIEW_DATA[name];
       showDashboard(name, data);
     }
@@ -159,7 +150,7 @@
       renderFolders(data.folders || []);
       loginPage.classList.add('hidden');
       dashboardPage.classList.remove('hidden');
-      errorMsg.classList.add('hidden'); // 로그인 성공 시 에러 메시지 숨김
+      errorMsg.classList.add('hidden');
     }
 
     function handleLogout() {
