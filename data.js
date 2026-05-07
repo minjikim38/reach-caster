@@ -92,12 +92,12 @@ const INTERVIEW_DATA = {
   
   "구연수":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3782?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B5%AC%EC%97%B0%EC%88%98" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "조아라":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/2568?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EC%A1%B0%EC%95%84%EB%9D%BC" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "백현기":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
@@ -107,17 +107,17 @@ const INTERVIEW_DATA = {
   
   "조상진":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3592?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EC%A1%B0%EC%83%81%EC%A7%84" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "박혜민":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3426?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EB%B0%95%ED%98%9C%EB%AF%BC" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "최선태":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3840?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=0&searchMonthStart=0&searchMonthEnd=0&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=" }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3818?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMed" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "김소중":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
@@ -172,7 +172,7 @@ const INTERVIEW_DATA = {
   
   "신지원":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://..." }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/739?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2025&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EC%8B%A0%EC%A7%80%EC%9B%90" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
 
 };
