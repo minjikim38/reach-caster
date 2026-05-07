@@ -117,7 +117,7 @@ const INTERVIEW_DATA = {
   
   "최선태":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
     { label: "파일명.xlsx", url: "https://example.com/file2.xlsx" },
-    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3818?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMed" }
+    { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3835?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn=&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi=&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%ED%86%A0%EC%8A%A4%EB%B1%85%ED%81%AC" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "김소중":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
