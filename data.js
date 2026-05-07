@@ -91,7 +91,7 @@ const INTERVIEW_DATA = {
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "구연수":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
-    { label: "구연수님_타겟성과예측_20260507.xlsx", url: "https://example.com/file2.xlsx" },
+    { label: "구연수님_타겟성과예측_20260507.xlsx", url: "구연수님_타겟성과예측_20260507.xlsx" },
     { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3782?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B5%AC%EC%97%B0%EC%88%98" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
@@ -156,7 +156,7 @@ const INTERVIEW_DATA = {
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
   "남유리":  { surveyUrl: DEFAULT_SURVEY_URL, folders: [ { name: "Reach Predictor", resources: [
-    { label: "남유리님_타겟성과예측_20260507.xlsx", url: "https://example.com/file2.xlsx" },
+    { label: "남유리님_타겟성과예측_20260507.xlsx", url: "files/남유리님_타겟성과예측_20260507.xlsx" },
     { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3803?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EB%82%A8%EC%9C%A0%EB%A6%AC" }
   ] }, { name: "Ratio Finder", resources: COMMON_RATIO_FINDER_RESOURCES } ] },
   
