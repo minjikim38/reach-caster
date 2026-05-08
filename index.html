@@ -166,32 +166,34 @@
       chevron.classList.toggle('open');
     }
 
-    function renderFolders(folders) {
-      const container = document.getElementById('folder-list');
-      container.innerHTML = folders.map((folder, i) => `
-        <div class="bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden">
-          <button onclick="toggleFolder(${i})" class="w-full flex items-center gap-4 px-5 py-5 text-left hover:bg-slate-50 transition-all">
-            <div class="w-9 h-9 rounded-lg bg-slate-800 text-white flex items-center justify-center">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+  function renderFolders(folders) {
+        const container = document.getElementById('folder-list');
+        container.innerHTML = folders.map((folder, i) => `
+          <div class="bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden">
+            <button onclick="toggleFolder(${i})" class="w-full flex items-center gap-4 px-5 py-5 text-left hover:bg-slate-50 transition-all">
+              <div class="w-9 h-9 rounded-lg bg-slate-800 text-white flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-bold text-slate-800 text-base">${folder.name}</p>
+              </div>
+              <!-- chevron에 open 클래스 추가 -->
+              <svg id="chevron-${i}" class="chevron open w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <!-- folder-body에 open 클래스 추가 -->
+            <div id="body-${i}" class="folder-body open">
+              <div class="px-5 pb-5 grid grid-cols-1 ${folder.resources.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-3">
+                ${folder.resources.map(r => `
+                  <a href="${r.url}" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 text-[13px] font-bold text-slate-600 hover:border-accent/30 hover:bg-white transition-all">
+                    <div class="w-7 h-7 rounded bg-white border border-slate-100 flex items-center justify-center text-slate-400">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke-width="2"/></svg>
+                    </div>
+                    <span class="truncate">${r.label}</span>
+                  </a>`).join('')}
+              </div>
             </div>
-            <div class="flex-1">
-              <p class="font-bold text-slate-800 text-base">${folder.name}</p>
-            </div>
-            <svg id="chevron-${i}" class="chevron w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </button>
-          <div id="body-${i}" class="folder-body">
-            <div class="px-5 pb-5 grid grid-cols-1 ${folder.resources.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-3">
-              ${folder.resources.map(r => `
-                <a href="${r.url}" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 text-[13px] font-bold text-slate-600 hover:border-accent/30 hover:bg-white transition-all">
-                  <div class="w-7 h-7 rounded bg-white border border-slate-100 flex items-center justify-center text-slate-400">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke-width="2"/></svg>
-                  </div>
-                  <span class="truncate">${r.label}</span>
-                </a>`).join('')}
-            </div>
-          </div>
-        </div>`).join('');
-    }
+          </div>`).join('');
+      }
   </script>
 </body>
 </html>
