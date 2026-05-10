@@ -8,9 +8,9 @@ const DEFAULT_SURVEY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeAK39xSiqZ
 
 // Ratio Finder 공통 리소스
 const COMMON_RATIO_FINDER_RESOURCES = [
-  { label: "비율 분석_ver1.xlsx", url: "https://example.com/file2.xlsx" },
-  { label: "비율 분석_ver2.xlsx", url: "https://example.com/file2.xlsx" },
-  { label: "비율 분석_ver3.xlsx", url: "https://example.com/file2.xlsx" }
+  { label: "RatioFinder_1934세.xlsx", url: "ratiofinder/RatioFinder_1934세.xlsx" },
+  { label: "RatioFinder_3549세.xlsx", url: "ratiofinder/RatioFinder_3549세.xlsx" },
+  { label: "RatioFinder_50세이상.xlsx", url: "ratiofinder/RatioFinder_50세이상.xlsx" }
 ];
 
 // ② 인터뷰 대상자별 자료 설정
