@@ -40,7 +40,7 @@ const INTERVIEW_DATA = {
       {
         name: "Reach Predictor",
         resources: [
-          { label: "김민지_20260429.xlsx", url: "reachpredictor/김민지님_타겟성과예측_20260507.xlsx" },
+          { label: "김민지님_타겟성과예측_20260507.xlsx", url: "reachpredictor/김민지님_타겟성과예측_20260507.xlsx" },
           { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/3060?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2026&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EA%B9%80%EB%AF%BC%EC%A7%80" },
         ]
       },
@@ -57,7 +57,7 @@ const INTERVIEW_DATA = {
       {
         name: "Reach Predictor",
         resources: [
-          { label: "신지아_20260429.xlsx", url: "reachpredictor/신지아님_타겟성과예측_20260507.xlsx" },
+          { label: "신지아님_타겟성과예측_20260507.xlsx", url: "reachpredictor/신지아님_타겟성과예측_20260507.xlsx" },
           { label: "(기존) MTS - Reach Caster(GRPs)", url: "https://ts.mezzomedia.co.kr/predict/grps/detail/2136?pageNum=1&pageSize=50&scenarioType=grps&masterCmpYn&oldScenarioFlag=0&searchYear=2025&searchMonthStart=1&searchMonthEnd=12&searchTeamCode&searchMediaCode&searchCateCode&searchKpi&searchTargetCode&searchBudgetMin&searchBudgetMax&searchStatus&searchType=0&searchText=%EC%8B%A0%EC%A7%80%EC%95%84" },
         ]
       },
