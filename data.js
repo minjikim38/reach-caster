@@ -8,9 +8,9 @@ const DEFAULT_SURVEY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeAK39xSiqZ
 
 // Ratio Finder 공통 리소스
 const COMMON_RATIO_FINDER_RESOURCES = [
-  { label: "RatioFinder_1934세.xlsx", url: "ratiofinder/RatioFinder_1934세.xlsx" },
-  { label: "RatioFinder_3549세.xlsx", url: "ratiofinder/RatioFinder_3549세.xlsx" },
-  { label: "RatioFinder_50세이상.xlsx", url: "ratiofinder/RatioFinder_50세이상.xlsx" }
+  { label: "RF_1934세.xlsx", url: "ratiofinder/RatioFinder_1934세.xlsx" },
+  { label: "RF_3549세.xlsx", url: "ratiofinder/RatioFinder_3549세.xlsx" },
+  { label: "RF_50세이상.xlsx", url: "ratiofinder/RatioFinder_50세이상.xlsx" }
 ];
 
 // ② 인터뷰 대상자별 자료 설정
